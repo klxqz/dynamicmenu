@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{$wa_app_static_url}plugins/dynamicmenu/css/superfish.css" media="screen">
+{if $settings.typemenu == 'vertical'}
+<link rel="stylesheet" media="screen" href="{$wa_app_static_url}plugins/dynamicmenu/css/superfish-vertical.css">
+{elseif $settings.typemenu == 'navbar'}
+<link rel="stylesheet" media="screen" href="{$wa_app_static_url}plugins/dynamicmenu/css/superfish-navbar.css">
+{/if}
+
+<script src="{$wa_app_static_url}plugins/dynamicmenu/js/hoverIntent.js"></script>
+<script src="{$wa_app_static_url}plugins/dynamicmenu/js/superfish.min.js"></script>
+
+<script>
+
+    (function($) { //create closure so we can safely use $ as alias for jQuery
+        $(document).ready(function() {
+            $('ul.sf-menu').superfish({
+                //add options here if required
+            });
+        });
+    })(jQuery);
+</script>
+
+<style>
+    .clear{
+        clear: both;
+    }
+</style>
+
+<div class="dynamicmenu_block">
+    {$menu}
+</div>
+<div class="clear"></div>
+
+
