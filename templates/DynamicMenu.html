@@ -13,21 +13,33 @@
     (function($) { //create closure so we can safely use $ as alias for jQuery
         $(document).ready(function() {
             $('ul.sf-menu').superfish({
-                //add options here if required
+                delay: parseInt('{$settings.delay|escape}'),
+                speed: '{$settings.speed|escape}',
+                cssArrows: {$settings.autoArrows|escape},
+                dropShadows: {$settings.dropShadows|escape},
             });
         });
     })(jQuery);
 </script>
 
 <style>
-    .clear{
+    .clear-both{
         clear: both;
+    }
+    .sf-menu li{
+        background: {$settings.sfMenuLi|escape} !important;
+    }
+    .sf-menu a{
+        color: {$settings.sfMenuA|escape} !important;
+    }
+    .sf-menu li a:hover{
+        color: {$settings.sfMenuAHover|escape} !important;
     }
 </style>
 
 <div class="dynamicmenu_block">
     {$menu}
 </div>
-<div class="clear"></div>
+<div class="clear-both"></div>
 
 
