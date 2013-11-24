@@ -43,9 +43,7 @@
 	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
 }
 .sf-menu a {
-	border-left: 1px solid #fff;
-	border-top: 1px solid #dFeEFF; /* fallback colour must use full shorthand */
-	border-top: 1px solid rgba(255,255,255,.5);
+
 	padding: .75em 1em;
 	text-decoration: none;
 	zoom: 1; /* IE7 */
@@ -54,21 +52,21 @@
 	color: #13a;
 }
 .sf-menu li {
-	background: #BDD2FF;
+
 	white-space: nowrap; /* no need for Supersubs plugin */
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;
 	transition: background .2s;
 }
 .sf-menu ul li {
-	background: #AABDE6;
+/*	background: #AABDE6;*/
 }
 .sf-menu ul ul li {
-	background: #9AAEDB;
+/*	background: #9AAEDB;*/
 }
 .sf-menu li:hover,
 .sf-menu li.sfHover {
-	background: #CFDEFF;
+
 	/* only transition out, not in */
 	-webkit-transition: none;
 	transition: none;

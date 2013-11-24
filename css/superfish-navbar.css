@@ -1,6 +1,6 @@
 /*** adding the class sf-navbar in addition to sf-menu creates an all-horizontal nav-bar menu ***/
 .sf-navbar {
-	background: #BDD2FF;
+
 	position: relative;
 	margin-bottom: 5em;
 }
@@ -11,7 +11,7 @@
 	position: absolute;
 	left: 0;
 	z-index: -1;
-	background-color: #BDD2FF;
+	
 	height: 200%;
 	width: 100%;
 }
@@ -19,7 +19,7 @@
 	box-shadow: none;
 }
 .sf-navbar li {
-	background: #AABDE6;
+
 	position: static;
 }
 .sf-navbar > li > a,
@@ -30,7 +30,7 @@
 	min-width: 36em; /* set this to whatever suits your design */
 }
 .sf-navbar ul li {
-	background: #BDD2FF;
+
 	position: relative;
 }
 .sf-navbar ul ul {
@@ -43,24 +43,7 @@
 .sf-navbar > li > ul > li {
 	float: left;
 }
-.sf-navbar li.current {
-	background: #BDD2FF;
-}
-.sf-navbar li:hover,
-.sf-navbar li.sfHover,
-.sf-navbar ul li.current {
-	background: #BDD2FF;
-}
-.sf-navbar ul li:hover,
-.sf-navbar ul li.sfHover,
-.sf-navbar ul ul li {
-	background: #D1DFFF;
-}
-.sf-navbar ul ul li:hover,
-.sf-navbar ul ul li.sfHover,
-.sf-navbar ul ul li.current {
-	background: #E6EEFF;
-}
+
 .sf-navbar ul li.current > a {
 	font-weight: bold;
 }

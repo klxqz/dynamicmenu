@@ -9,14 +9,12 @@
 <script src="{$wa_app_static_url}plugins/dynamicmenu/js/superfish.min.js"></script>
 
 <script>
-
     (function($) { //create closure so we can safely use $ as alias for jQuery
         $(document).ready(function() {
             $('ul.sf-menu').superfish({
                 delay: parseInt('{$settings.delay|escape}'),
                 speed: '{$settings.speed|escape}',
                 cssArrows: {$settings.autoArrows|escape},
-                dropShadows: {$settings.dropShadows|escape},
             });
         });
     })(jQuery);
@@ -27,19 +25,26 @@
         clear: both;
     }
     .sf-menu li{
-        background: {$settings.sfMenuLi|escape} !important;
+        background: {$settings.sfMenuLi|escape};
     }
-    .sf-menu a{
-        color: {$settings.sfMenuA|escape} !important;
+    .sf-menu li:hover,.sf-menu li.sfHover{
+        background: {$settings.sfMenuLiHover|escape};
+    }
+    .sf-menu a{ 
+        color: {$settings.sfMenuA|escape};
+        border-left: {$settings.sfMenuABorderLeftWidth|escape}px solid {$settings.sfMenuABorderLeftColor|escape};
+        border-top: {$settings.sfMenuABorderTopWidth|escape}px solid {$settings.sfMenuABorderTopColor|escape};
     }
     .sf-menu li a:hover{
-        color: {$settings.sfMenuAHover|escape} !important;
+        color: {$settings.sfMenuAHover|escape};
+    } 
+    {if $settings.hideDefMenu}
+    .category-tree{
+        display: none;
     }
+    {/if}
 </style>
 
 <div class="dynamicmenu_block">
     {$menu}
 </div>
-<div class="clear-both"></div>
-
-

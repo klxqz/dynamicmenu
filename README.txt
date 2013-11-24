@@ -1,17 +1,17 @@
-Плагин "Лупа" для Shop-Script 5
+Плагин "Динамическое меню" для Shop-Script 5
 --------------------------
-Разработчик Коробонв Николай wa-plugins.ru <support@wa-plugins.ru>
+Разработчик Коробов Николай wa-plugins.ru <support@wa-plugins.ru>
 
-Эффект лупы при увеличение изображения.
+Выпадающее многоуровневое динамическое меню.
 --------------------------
 Установка:
 
-   1) Скопируйте в каталог wa-apps/shop/plugins/ папку zoomer/
+   1) Скопируйте в каталог wa-apps/shop/plugins/ папку dynamicmenu/
     2) Добавьте запись в конфигурационный файл фреймворка wa-config/apps/shop/plugins.php:
-          'zoomer' => true
+          'dynamicmenu' => true
           Пример содержимого файла plugins.php:
             return array (
-                'zoomer' => true
+                'dynamicmenu' => true
             );
 --------------------------
 Использование:
